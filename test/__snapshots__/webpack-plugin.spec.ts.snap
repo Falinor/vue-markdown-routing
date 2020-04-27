@@ -229,35 +229,37 @@ function AssetsIndex() {
   return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
-  name: 'assets',
-  path: '/assets',
-  redirect: { name: 'assets-index' },
-  children: [
-    {
-      name: 'assets-guides',
-      path: '/assets/guides',
-      redirect: { name: 'assets-guides-index' },
-      children: [
-        {
-          name: 'assets-guides-foo',
-          path: '/assets/guides/foo',
-          component: AssetsGuidesFoo
-        },
-        {
-          name: 'assets-guides-index',
-          path: '/assets/guides',
-          component: AssetsGuidesIndex
-        }
-      ]
-    },
-    {
-      name: 'assets-index',
-      path: '/assets',
-      component: AssetsIndex
-    }
-  ]
-});
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
+  {
+    name: 'assets',
+    path: '/assets',
+    redirect: { name: 'assets-index' },
+    children: [
+      {
+        name: 'assets-guides',
+        path: '/assets/guides',
+        redirect: { name: 'assets-guides-index' },
+        children: [
+          {
+            name: 'assets-guides-foo',
+            path: '/assets/guides/foo',
+            component: AssetsGuidesFoo
+          },
+          {
+            name: 'assets-guides-index',
+            path: '/assets/guides',
+            component: AssetsGuidesIndex
+          }
+        ]
+      },
+      {
+        name: 'assets-index',
+        path: '/assets',
+        component: AssetsIndex
+      }
+    ]
+  }
+]);
 
 
 /***/ })
@@ -493,38 +495,40 @@ function AssetsIndex() {
   return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
-  name: 'assets',
-  path: '/assets',
-  redirect: { name: 'assets-index' },
-  children: [
-    {
-      name: 'assets-guides',
-      path: '/assets/guides',
-      redirect: { name: 'assets-guides-index' },
-      children: [
-        {
-          name: 'assets-guides-foo',
-          path: '/assets/guides/foo',
-          component: AssetsGuidesFoo,
-          meta: {
-            title: 'Bar'
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
+  {
+    name: 'assets',
+    path: '/assets',
+    redirect: { name: 'assets-index' },
+    children: [
+      {
+        name: 'assets-guides',
+        path: '/assets/guides',
+        redirect: { name: 'assets-guides-index' },
+        children: [
+          {
+            name: 'assets-guides-foo',
+            path: '/assets/guides/foo',
+            component: AssetsGuidesFoo,
+            meta: {
+              title: 'Bar'
+            }
+          },
+          {
+            name: 'assets-guides-index',
+            path: '/assets/guides',
+            component: AssetsGuidesIndex
           }
-        },
-        {
-          name: 'assets-guides-index',
-          path: '/assets/guides',
-          component: AssetsGuidesIndex
-        }
-      ]
-    },
-    {
-      name: 'assets-index',
-      path: '/assets',
-      component: AssetsIndex
-    }
-  ]
-});
+        ]
+      },
+      {
+        name: 'assets-index',
+        path: '/assets',
+        component: AssetsIndex
+      }
+    ]
+  }
+]);
 
 
 /***/ })
@@ -764,40 +768,42 @@ function AssetsIndex() {
   return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
-  name: 'assets',
-  path: '/assets',
-  redirect: { name: 'assets-index' },
-  children: [
-    {
-      name: 'assets-foo',
-      path: '/assets/foo',
-      component: AssetsFoo
-    },
-    {
-      name: 'assets-guides',
-      path: '/assets/guides',
-      redirect: { name: 'assets-guides-index' },
-      children: [
-        {
-          name: 'assets-guides-foo',
-          path: '/assets/guides/foo',
-          component: AssetsGuidesFoo
-        },
-        {
-          name: 'assets-guides-index',
-          path: '/assets/guides',
-          component: AssetsGuidesIndex
-        }
-      ]
-    },
-    {
-      name: 'assets-index',
-      path: '/assets',
-      component: AssetsIndex
-    }
-  ]
-});
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
+  {
+    name: 'assets',
+    path: '/assets',
+    redirect: { name: 'assets-index' },
+    children: [
+      {
+        name: 'assets-foo',
+        path: '/assets/foo',
+        component: AssetsFoo
+      },
+      {
+        name: 'assets-guides',
+        path: '/assets/guides',
+        redirect: { name: 'assets-guides-index' },
+        children: [
+          {
+            name: 'assets-guides-foo',
+            path: '/assets/guides/foo',
+            component: AssetsGuidesFoo
+          },
+          {
+            name: 'assets-guides-index',
+            path: '/assets/guides',
+            component: AssetsGuidesIndex
+          }
+        ]
+      },
+      {
+        name: 'assets-index',
+        path: '/assets',
+        component: AssetsIndex
+      }
+    ]
+  }
+]);
 
 
 /***/ })
@@ -1033,35 +1039,37 @@ function AssetsIndex() {
   return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
-  name: 'assets',
-  path: '/assets',
-  redirect: { name: 'assets-index' },
-  children: [
-    {
-      name: 'assets-guides',
-      path: '/assets/guides',
-      redirect: { name: 'assets-guides-index' },
-      children: [
-        {
-          name: 'assets-guides-foo',
-          path: '/assets/guides/foo',
-          component: AssetsGuidesFoo
-        },
-        {
-          name: 'assets-guides-index',
-          path: '/assets/guides',
-          component: AssetsGuidesIndex
-        }
-      ]
-    },
-    {
-      name: 'assets-index',
-      path: '/assets',
-      component: AssetsIndex
-    }
-  ]
-});
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
+  {
+    name: 'assets',
+    path: '/assets',
+    redirect: { name: 'assets-index' },
+    children: [
+      {
+        name: 'assets-guides',
+        path: '/assets/guides',
+        redirect: { name: 'assets-guides-index' },
+        children: [
+          {
+            name: 'assets-guides-foo',
+            path: '/assets/guides/foo',
+            component: AssetsGuidesFoo
+          },
+          {
+            name: 'assets-guides-index',
+            path: '/assets/guides',
+            component: AssetsGuidesIndex
+          }
+        ]
+      },
+      {
+        name: 'assets-index',
+        path: '/assets',
+        component: AssetsIndex
+      }
+    ]
+  }
+]);
 
 
 /***/ })
@@ -1294,30 +1302,32 @@ function AssetsIndex() {
   return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
-  name: 'assets',
-  path: '/assets',
-  redirect: { name: 'assets-index' },
-  children: [
-    {
-      name: 'assets-guides',
-      path: '/assets/guides',
-      redirect: { name: 'assets-guides-index' },
-      children: [
-        {
-          name: 'assets-guides-index',
-          path: '/assets/guides',
-          component: AssetsGuidesIndex
-        }
-      ]
-    },
-    {
-      name: 'assets-index',
-      path: '/assets',
-      component: AssetsIndex
-    }
-  ]
-});
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
+  {
+    name: 'assets',
+    path: '/assets',
+    redirect: { name: 'assets-index' },
+    children: [
+      {
+        name: 'assets-guides',
+        path: '/assets/guides',
+        redirect: { name: 'assets-guides-index' },
+        children: [
+          {
+            name: 'assets-guides-index',
+            path: '/assets/guides',
+            component: AssetsGuidesIndex
+          }
+        ]
+      },
+      {
+        name: 'assets-index',
+        path: '/assets',
+        component: AssetsIndex
+      }
+    ]
+  }
+]);
 
 
 /***/ })

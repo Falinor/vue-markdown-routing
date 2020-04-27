@@ -1,6 +1,6 @@
 {
   "name": "vue-markdown-routing",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Falinor",
   "description": "Generate Vue Router routes automatically using a markdown arborescence",
   "keywords": [
@@ -76,6 +76,6 @@
     "webpack": "^4.39.2"
   },
   "dependencies": {
-    "vue-md-route-generator": "^1.0.0"
+    "vue-md-route-generator": "^1.1.0"
   }
 }

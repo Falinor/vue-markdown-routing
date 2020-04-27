@@ -85,7 +85,7 @@ describe('webpack plugin', () => {
   it('watches changing route meta data', done => {
     const plugin = new Plugin({
       folders: [resolve('fixtures/assets')],
-      importPrefix: '@/',
+      importPrefix: '@/'
     })
 
     let count = 0
@@ -114,7 +114,7 @@ describe('webpack plugin', () => {
   it('watches removing a page', done => {
     const plugin = new Plugin({
       folders: [resolve('fixtures/assets')],
-      importPrefix: '@/',
+      importPrefix: '@/'
     })
 
     let count = 0
@@ -134,7 +134,7 @@ describe('webpack plugin', () => {
   it('does not fire compilation when the route does not changed', done => {
     const plugin = new Plugin({
       folders: [resolve('fixtures/assets')],
-      importPrefix: '@/',
+      importPrefix: '@/'
     })
 
     let count = 0
@@ -155,7 +155,7 @@ describe('webpack plugin', () => {
   it('should not stop watching after detecting route meta syntax errors', done => {
     const plugin = new Plugin({
       folders: [resolve('fixtures/assets')],
-      importPrefix: '@/',
+      importPrefix: '@/'
     })
 
     let count = 0
