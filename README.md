@@ -16,13 +16,14 @@ $ npm install -D vue-auto-routing
 
 ## Usage
 
-vue-auto-routing resolves Vue Router routing automatically by using [vue-route-generator](https://github.com/ktsn/vue-route-generator). The routes are generated with the same rules with [Nuxt routing](https://nuxtjs.org/guide/routing).
+vue-md-auto-routing resolves Vue Router routing automatically by using [vue-route-generator](https://github.com/ktsn/vue-route-generator).
+The routes are generated with the same rules with [Nuxt routing](https://nuxtjs.org/guide/routing).
 
 To use this, you import `vue-auto-routing` and pass it into Vue Router constructor options.
 
 ```js
 // Import generated routes
-import routes from 'vue-auto-routing'
+import routes from 'vue-md-auto-routing'
 
 import Vue from 'vue'
 import Router from 'vue-router'
@@ -48,10 +49,10 @@ module.exports = {
   plugins: [
     new VueAutoRoutingPlugin({
       // Path to the directory that contains your page components.
-      pages: 'src/pages',
+      folders: ['src/assets/guides'],
 
       // A string that will be added to importing component path (default @/pages/).
-      importPrefix: '@/pages/'
+      importPrefix: '@/assets/'
     })
   ]
 }

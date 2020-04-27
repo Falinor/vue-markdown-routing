@@ -2,9 +2,9 @@ import * as assert from 'assert'
 import * as fs from 'fs'
 import * as path from 'path'
 import { Compiler } from 'webpack'
-import { generateRoutes, GenerateConfig } from 'vue-route-generator'
+import { generateRoutes, GenerateConfig } from 'vue-md-route-generator'
 
-const pluginName = 'VueAutoRoutingPlugin'
+const pluginName = 'VueMarkdownRoutingPlugin'
 
 interface Options extends GenerateConfig {}
 
@@ -14,13 +14,13 @@ namespace VueAutoRoutingPlugin {
 
 class VueAutoRoutingPlugin {
   constructor(private options: Options) {
-    assert(options.pages, '`pages` is required')
+    assert(options.folders, '`folders` is required')
   }
 
   apply(compiler: Compiler) {
     const generate = () => {
       const code = generateRoutes(this.options)
-      const to = path.resolve(__dirname, '../index.js')
+      const to = path.resolve(__dirname, '..', 'index.js')
 
       if (
         fs.existsSync(to) &&

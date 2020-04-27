@@ -1,5 +1,8 @@
 node_modules/
 /lib/
 /test/fixtures/out/
-/test/fixtures/pages/
+/test/fixtures/assets/
 /index.js
+
+.idea/
+yarn-error.log

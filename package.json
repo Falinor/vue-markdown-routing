@@ -1,14 +1,16 @@
 {
-  "name": "vue-auto-routing",
-  "version": "0.4.1",
-  "author": "katashin",
-  "description": "Generate Vue Router routing automatically",
+  "name": "vue-markdown-routing",
+  "version": "1.0.0",
+  "author": "Falinor",
+  "description": "Generate Vue Router routes automatically using a markdown arborescence",
   "keywords": [
     "Vue",
     "Vue Router",
     "routing",
     "auto generate",
     "generator",
+    "markdown",
+    "md",
     "webpack",
     "plugin"
   ],
@@ -20,11 +22,11 @@
     "index.js",
     "index.d.ts"
   ],
-  "homepage": "https://github.com/ktsn/vue-auto-routing",
-  "bugs": "https://github.com/ktsn/vue-auto-routing/issues",
+  "homepage": "https://github.com/Falinor/vue-auto-routing",
+  "bugs": "https://github.com/Falinor/vue-auto-routing/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ktsn/vue-auto-routing.git"
+    "url": "https://github.com/Falinor/vue-auto-routing.git"
   },
   "scripts": {
     "prepublishOnly": "npm run test && npm run clean && npm run build",
@@ -74,6 +76,6 @@
     "webpack": "^4.39.2"
   },
   "dependencies": {
-    "vue-route-generator": "^0.4.3"
+    "vue-md-route-generator": "^1.0.0"
   }
 }

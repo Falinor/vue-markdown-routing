@@ -1,6 +1,7 @@
 import * as path from 'path'
 import * as fse from 'fs-extra'
 import * as webpack from 'webpack'
+
 import * as Plugin from '../src/webpack-plugin'
 
 const resolve = (p: string) => path.resolve(__dirname, p)
@@ -28,12 +29,12 @@ const matchOutputWithSnapshot = () => {
 }
 
 const addPage = (p: string, content: string = '') => {
-  const to = resolve(path.join('fixtures/pages', p))
+  const to = resolve(path.join('fixtures/assets', p))
   fse.outputFileSync(to, content)
 }
 
 const removePage = (p: string) => {
-  const to = resolve(path.join('fixtures/pages', p))
+  const to = resolve(path.join('fixtures/assets', p))
   fse.unlinkSync(to)
 }
 
@@ -41,16 +42,17 @@ describe('webpack plugin', () => {
   beforeEach(() => {
     fse.removeSync(resolve('../index.js'))
 
-    // reset pages
-    fse.removeSync(resolve('fixtures/pages'))
-    addPage('index.vue')
-    addPage('users/foo.vue')
-    addPage('users/_id.vue')
+    // reset assets
+    fse.removeSync(resolve('fixtures/assets'))
+    addPage('index.md')
+    addPage('guides/foo.md')
+    addPage('guides/index.md')
   })
 
   it('imports dynamically created routes', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      folders: [resolve('fixtures/assets')],
+      importPrefix: '@/'
     })
 
     compiler(plugin).run(() => {
@@ -61,7 +63,9 @@ describe('webpack plugin', () => {
 
   it('watches adding a page', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      folders: [resolve('fixtures/assets')],
+      importPrefix: '@/',
+      dynamicImport: true
     })
 
     let count = 0
@@ -69,7 +73,7 @@ describe('webpack plugin', () => {
       count++
       switch (count) {
         case 1:
-          addPage('users.vue')
+          addPage('foo.md')
           break
         default:
           matchOutputWithSnapshot()
@@ -80,7 +84,8 @@ describe('webpack plugin', () => {
 
   it('watches changing route meta data', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      folders: [resolve('fixtures/assets')],
+      importPrefix: '@/',
     })
 
     let count = 0
@@ -108,7 +113,8 @@ describe('webpack plugin', () => {
 
   it('watches removing a page', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      folders: [resolve('fixtures/assets')],
+      importPrefix: '@/',
     })
 
     let count = 0
@@ -116,7 +122,7 @@ describe('webpack plugin', () => {
       count++
       switch (count) {
         case 1:
-          removePage('users/foo.vue')
+          removePage('guides/foo.md')
           break
         default:
           matchOutputWithSnapshot()
@@ -127,7 +133,8 @@ describe('webpack plugin', () => {
 
   it('does not fire compilation when the route does not changed', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      folders: [resolve('fixtures/assets')],
+      importPrefix: '@/',
     })
 
     let count = 0
@@ -147,7 +154,8 @@ describe('webpack plugin', () => {
 
   it('should not stop watching after detecting route meta syntax errors', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      folders: [resolve('fixtures/assets')],
+      importPrefix: '@/',
     })
 
     let count = 0
@@ -156,25 +164,19 @@ describe('webpack plugin', () => {
       switch (count) {
         case 1:
           addPage(
-            'users/foo.vue',
-            `
-              <route-meta>
-              {
-                "requiresAuth": true,
-              }
-              </route-meta>
+            'guides/foo.md',
+            `---
+title: Bar,
+---
             `
           )
           break
         case 2:
           addPage(
-            'users/foo.vue',
-            `
-              <route-meta>
-              {
-                "requiresAuth": true
-              }
-              </route-meta>
+            'guides/foo.md',
+            `---
+title: Bar
+---
             `
           )
           break

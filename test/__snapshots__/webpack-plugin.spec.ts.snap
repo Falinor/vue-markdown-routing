@@ -219,33 +219,45 @@ console.log(___WEBPACK_IMPORTED_MODULE_0__[\\"default\\"])
 
 \\"use strict\\";
 __webpack_require__.r(__webpack_exports__);
-function Index() {
-  return __webpack_require__.e(/* import() | index */ 1).then(__webpack_require__.t.bind(null, 2, 7))
+function AssetsGuidesFoo() {
+  return __webpack_require__.e(/* import() | assets-guides-foo */ 1).then(__webpack_require__.t.bind(null, 2, 7))
 }
-function UsersFoo() {
-  return __webpack_require__.e(/* import() | users-foo */ 2).then(__webpack_require__.t.bind(null, 3, 7))
+function AssetsGuidesIndex() {
+  return __webpack_require__.e(/* import() | assets-guides-index */ 2).then(__webpack_require__.t.bind(null, 3, 7))
 }
-function UsersId() {
-  return __webpack_require__.e(/* import() | users-id */ 3).then(__webpack_require__.t.bind(null, 4, 7))
+function AssetsIndex() {
+  return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
-  {
-    name: 'index',
-    path: '/',
-    component: Index
-  },
-  {
-    name: 'users-foo',
-    path: '/users/foo',
-    component: UsersFoo
-  },
-  {
-    name: 'users-id',
-    path: '/users/:id?',
-    component: UsersId
-  }
-]);
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
+  name: 'assets',
+  path: '/assets',
+  redirect: { name: 'assets-index' },
+  children: [
+    {
+      name: 'assets-guides',
+      path: '/assets/guides',
+      redirect: { name: 'assets-guides-index' },
+      children: [
+        {
+          name: 'assets-guides-foo',
+          path: '/assets/guides/foo',
+          component: AssetsGuidesFoo
+        },
+        {
+          name: 'assets-guides-index',
+          path: '/assets/guides',
+          component: AssetsGuidesIndex
+        }
+      ]
+    },
+    {
+      name: 'assets-index',
+      path: '/assets',
+      component: AssetsIndex
+    }
+  ]
+});
 
 
 /***/ })
@@ -471,36 +483,48 @@ console.log(___WEBPACK_IMPORTED_MODULE_0__[\\"default\\"])
 
 \\"use strict\\";
 __webpack_require__.r(__webpack_exports__);
-function Index() {
-  return __webpack_require__.e(/* import() | index */ 1).then(__webpack_require__.t.bind(null, 2, 7))
+function AssetsGuidesFoo() {
+  return __webpack_require__.e(/* import() | assets-guides-foo */ 1).then(__webpack_require__.t.bind(null, 2, 7))
 }
-function UsersFoo() {
-  return __webpack_require__.e(/* import() | users-foo */ 2).then(__webpack_require__.t.bind(null, 3, 7))
+function AssetsGuidesIndex() {
+  return __webpack_require__.e(/* import() | assets-guides-index */ 2).then(__webpack_require__.t.bind(null, 3, 7))
 }
-function UsersId() {
-  return __webpack_require__.e(/* import() | users-id */ 3).then(__webpack_require__.t.bind(null, 4, 7))
+function AssetsIndex() {
+  return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
-  {
-    name: 'index',
-    path: '/',
-    component: Index
-  },
-  {
-    name: 'users-foo',
-    path: '/users/foo',
-    component: UsersFoo,
-    meta: {
-      requiresAuth: true
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
+  name: 'assets',
+  path: '/assets',
+  redirect: { name: 'assets-index' },
+  children: [
+    {
+      name: 'assets-guides',
+      path: '/assets/guides',
+      redirect: { name: 'assets-guides-index' },
+      children: [
+        {
+          name: 'assets-guides-foo',
+          path: '/assets/guides/foo',
+          component: AssetsGuidesFoo,
+          meta: {
+            title: 'Bar'
+          }
+        },
+        {
+          name: 'assets-guides-index',
+          path: '/assets/guides',
+          component: AssetsGuidesIndex
+        }
+      ]
+    },
+    {
+      name: 'assets-index',
+      path: '/assets',
+      component: AssetsIndex
     }
-  },
-  {
-    name: 'users-id',
-    path: '/users/:id?',
-    component: UsersId
-  }
-]);
+  ]
+});
 
 
 /***/ })
@@ -726,43 +750,54 @@ console.log(___WEBPACK_IMPORTED_MODULE_0__[\\"default\\"])
 
 \\"use strict\\";
 __webpack_require__.r(__webpack_exports__);
-function Index() {
-  return __webpack_require__.e(/* import() | index */ 1).then(__webpack_require__.t.bind(null, 2, 7))
-}
-function Users() {
-  return __webpack_require__.e(/* import() | users */ 4).then(__webpack_require__.t.bind(null, 5, 7))
-}
-function UsersFoo() {
-  return __webpack_require__.e(/* import() | users-foo */ 2).then(__webpack_require__.t.bind(null, 3, 7))
-}
-function UsersId() {
-  return __webpack_require__.e(/* import() | users-id */ 3).then(__webpack_require__.t.bind(null, 4, 7))
+function AssetsFoo() {
+  return __webpack_require__.e(/* import() | assets-foo */ 4).then(__webpack_require__.t.bind(null, 5, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
-  {
-    name: 'index',
-    path: '/',
-    component: Index
-  },
-  {
-    name: 'users',
-    path: '/users',
-    component: Users,
-    children: [
-      {
-        name: 'users-foo',
-        path: 'foo',
-        component: UsersFoo
-      },
-      {
-        name: 'users-id',
-        path: ':id?',
-        component: UsersId
-      }
-    ]
-  }
-]);
+function AssetsGuidesFoo() {
+  return __webpack_require__.e(/* import() | assets-guides-foo */ 1).then(__webpack_require__.t.bind(null, 2, 7))
+}
+function AssetsGuidesIndex() {
+  return __webpack_require__.e(/* import() | assets-guides-index */ 2).then(__webpack_require__.t.bind(null, 3, 7))
+}
+function AssetsIndex() {
+  return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
+}
+
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
+  name: 'assets',
+  path: '/assets',
+  redirect: { name: 'assets-index' },
+  children: [
+    {
+      name: 'assets-foo',
+      path: '/assets/foo',
+      component: AssetsFoo
+    },
+    {
+      name: 'assets-guides',
+      path: '/assets/guides',
+      redirect: { name: 'assets-guides-index' },
+      children: [
+        {
+          name: 'assets-guides-foo',
+          path: '/assets/guides/foo',
+          component: AssetsGuidesFoo
+        },
+        {
+          name: 'assets-guides-index',
+          path: '/assets/guides',
+          component: AssetsGuidesIndex
+        }
+      ]
+    },
+    {
+      name: 'assets-index',
+      path: '/assets',
+      component: AssetsIndex
+    }
+  ]
+});
 
 
 /***/ })
@@ -988,36 +1023,45 @@ console.log(___WEBPACK_IMPORTED_MODULE_0__[\\"default\\"])
 
 \\"use strict\\";
 __webpack_require__.r(__webpack_exports__);
-function Index() {
-  return __webpack_require__.e(/* import() | index */ 1).then(__webpack_require__.t.bind(null, 2, 7))
+function AssetsGuidesFoo() {
+  return __webpack_require__.e(/* import() | assets-guides-foo */ 1).then(__webpack_require__.t.bind(null, 2, 7))
 }
-function UsersFoo() {
-  return __webpack_require__.e(/* import() | users-foo */ 2).then(__webpack_require__.t.bind(null, 3, 7))
+function AssetsGuidesIndex() {
+  return __webpack_require__.e(/* import() | assets-guides-index */ 2).then(__webpack_require__.t.bind(null, 3, 7))
 }
-function UsersId() {
-  return __webpack_require__.e(/* import() | users-id */ 3).then(__webpack_require__.t.bind(null, 4, 7))
+function AssetsIndex() {
+  return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
-  {
-    name: 'index',
-    path: '/',
-    component: Index
-  },
-  {
-    name: 'users-foo',
-    path: '/users/foo',
-    component: UsersFoo,
-    meta: {
-      requiresAuth: true
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
+  name: 'assets',
+  path: '/assets',
+  redirect: { name: 'assets-index' },
+  children: [
+    {
+      name: 'assets-guides',
+      path: '/assets/guides',
+      redirect: { name: 'assets-guides-index' },
+      children: [
+        {
+          name: 'assets-guides-foo',
+          path: '/assets/guides/foo',
+          component: AssetsGuidesFoo
+        },
+        {
+          name: 'assets-guides-index',
+          path: '/assets/guides',
+          component: AssetsGuidesIndex
+        }
+      ]
+    },
+    {
+      name: 'assets-index',
+      path: '/assets',
+      component: AssetsIndex
     }
-  },
-  {
-    name: 'users-id',
-    path: '/users/:id?',
-    component: UsersId
-  }
-]);
+  ]
+});
 
 
 /***/ })
@@ -1243,25 +1287,37 @@ console.log(___WEBPACK_IMPORTED_MODULE_0__[\\"default\\"])
 
 \\"use strict\\";
 __webpack_require__.r(__webpack_exports__);
-function Index() {
-  return __webpack_require__.e(/* import() | index */ 1).then(__webpack_require__.t.bind(null, 2, 7))
+function AssetsGuidesIndex() {
+  return __webpack_require__.e(/* import() | assets-guides-index */ 2).then(__webpack_require__.t.bind(null, 3, 7))
 }
-function UsersId() {
-  return __webpack_require__.e(/* import() | users-id */ 3).then(__webpack_require__.t.bind(null, 4, 7))
+function AssetsIndex() {
+  return __webpack_require__.e(/* import() | assets-index */ 3).then(__webpack_require__.t.bind(null, 4, 7))
 }
 
-/* harmony default export */ __webpack_exports__[\\"default\\"] = ([
-  {
-    name: 'index',
-    path: '/',
-    component: Index
-  },
-  {
-    name: 'users-id',
-    path: '/users/:id?',
-    component: UsersId
-  }
-]);
+/* harmony default export */ __webpack_exports__[\\"default\\"] = ({
+  name: 'assets',
+  path: '/assets',
+  redirect: { name: 'assets-index' },
+  children: [
+    {
+      name: 'assets-guides',
+      path: '/assets/guides',
+      redirect: { name: 'assets-guides-index' },
+      children: [
+        {
+          name: 'assets-guides-index',
+          path: '/assets/guides',
+          component: AssetsGuidesIndex
+        }
+      ]
+    },
+    {
+      name: 'assets-index',
+      path: '/assets',
+      component: AssetsIndex
+    }
+  ]
+});
 
 
 /***/ })
