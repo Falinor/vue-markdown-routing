@@ -1,13 +1,11 @@
-# vue-auto-routing
+# vue-markdown-routing
 
 Generate Vue Router routing automatically.
-
-You may want to use [vue-cli-plugin-auto-routing](https://github.com/ktsn/vue-cli-plugin-auto-routing) which includes all useful features on routing.
 
 ## Installation
 
 ```bash
-$ npm install -D vue-auto-routing
+$ npm install -D vue-markdown-routing
 ```
 
 ## Requirements
@@ -16,10 +14,7 @@ $ npm install -D vue-auto-routing
 
 ## Usage
 
-vue-md-auto-routing resolves Vue Router routing automatically by using [vue-route-generator](https://github.com/ktsn/vue-route-generator).
-The routes are generated with the same rules with [Nuxt routing](https://nuxtjs.org/guide/routing).
-
-To use this, you import `vue-auto-routing` and pass it into Vue Router constructor options.
+To use this, you import `vue-markdown-routing` and pass it into Vue Router constructor options.
 
 ```js
 // Import generated routes
@@ -40,7 +35,7 @@ You also need to add a webpack plugin vue-auto-routing provides. The plugin opti
 
 ```js
 // webpack.config.js
-
+const path = require('path')
 const VueAutoRoutingPlugin = require('vue-auto-routing/lib/webpack-plugin')
 
 module.exports = {
@@ -48,10 +43,12 @@ module.exports = {
 
   plugins: [
     new VueAutoRoutingPlugin({
-      // Path to the directory that contains your page components.
-      folders: ['src/assets/guides'],
-
-      // A string that will be added to importing component path (default @/pages/).
+      // Directories to load markdown assets from
+      folders: [
+        path.resolve(__dirname, 'src', 'assets', 'guides'),
+        path.resolve(__dirname, 'src', 'assets', 'articles')
+      ],
+      // A string that will be added to importing component path (defaults to @/assets/).
       importPrefix: '@/assets/'
     })
   ]
@@ -60,9 +57,7 @@ module.exports = {
 
 ## Related Projects
 
-* [vue-cli-plugin-auto-routing](https://github.com/ktsn/vue-cli-plugin-auto-routing): Vue CLI plugin including auto pages and layouts resolution.
-* [vue-router-layout](https://github.com/ktsn/vue-router-layout): Lightweight layout resolver for Vue Router.
-* [vue-route-generator](https://github.com/ktsn/vue-route-generator): Low-level utility generating routing which vue-auto-routing using under the hood.
+* [vue-md-route-generator](https://github.com/Falinor/vue-md-route-generator): Low-level utility generating routes based on a markdown arborescence.
 
 ## License
 
