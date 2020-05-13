@@ -4,7 +4,7 @@ import * as webpack from 'webpack'
 
 import * as Plugin from '../src/webpack-plugin'
 
-const resolve = (p: string) => path.resolve(__dirname, p)
+const resolve = (p: string) => path.resolve(__dirname, ...p.split('/').filter(p => !!p))
 
 const compiler = (plugin: Plugin): webpack.Compiler => {
   return webpack({

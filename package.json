@@ -1,6 +1,6 @@
 {
   "name": "vue-markdown-routing",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": "Falinor",
   "description": "Generate Vue Router routes automatically using a markdown arborescence",
   "keywords": [
@@ -29,7 +29,7 @@
     "url": "https://github.com/Falinor/vue-markdown-routing.git"
   },
   "scripts": {
-    "prepublishOnly": "npm run test && npm run clean && npm run build",
+    "prepublishOnly": "npm run clean && npm run build",
     "clean": "rm -rf lib && echo export default [] > index.js",
     "build": "tsc -p src",
     "dev": "jest --watch",
