@@ -4897,10 +4897,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-md-route-generator@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/vue-md-route-generator/-/vue-md-route-generator-1.1.0.tgz#a7743efe84ba2f0d895b3e3a12d5f1686f725228"
-  integrity sha512-zDWwZAoPyZHzJY4s1nq+u5rgVpfFMiAMlPiU7Ck2upRBaTfLcc6ZIVSiC2DzG3t0D/iZizc6AZx6SyUbdDp8dQ==
+vue-md-route-generator@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vue-md-route-generator/-/vue-md-route-generator-1.2.0.tgz#37c4513fc51aaadb0091895c33a3156ba77747da"
+  integrity sha512-NtvenkFYbEf/Byzxbxz5fVYv/PinJoNZDwTjGCcEG6DJ4RAX4UMHf9TrdwY4nVRGQd3kFCrLGJWiJoQSq/lK7A==
   dependencies:
     directory-tree "^2.2.4"
     gray-matter "^4.0.2"
